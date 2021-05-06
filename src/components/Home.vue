@@ -1,26 +1,81 @@
 <template>
 
   <div class="nav">
-    <div>
-      <ul class="tabStyle">
-        <li v-for="(item,index) in topTab" :key="index">
-          <span>{{item.lable}}</span>
-        </li>
-      </ul>
-    </div>
+    <HeadTab />
+<!--    <div>-->
+<!--      <ul class="tabStyle">-->
+<!--        <li v-for="(item,index) in topTab" :key="index">-->
+<!--          <span>{{item.lable}}</span>-->
+<!--        </li>-->
+<!--      </ul>-->
+<!--    </div>-->
     <div class="content">
-      <div class="introduce">It's ME</div>
-      <div class="name">lonely people</div>
-<!--      <div class="name">people</div>-->
+      <div>
+        <div class="introduce">It's ME</div>
+        <div class="name">lonely people</div>
+      </div>
+      <div class="date">
+        {{nowYear}}
+      </div>
+      
     </div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+    <div>22</div>
+
+
 
   </div>
 </template>
 
 
 <script>
+import HeadTab from './HeadTab.vue'
 export default {
   name:"Home",
+  components:{HeadTab},
   data(){
     return {
       topTab:[{
@@ -32,8 +87,17 @@ export default {
       },{
         lable:'ABOUT',
       },
-      ]
+      ],
+      nowYear:''
     }
+  },
+
+  mounted(){
+    let nowDate = new Date()
+    this.nowYear = nowDate.getFullYear()
+  },
+  methods:{
+
 
   }
 
@@ -58,8 +122,12 @@ export default {
 }
 
 .content{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   margin-left: 10%;
-  margin-top: 25%;
+  margin-right: 3%;
+  margin-top: 10%;
   .introduce{
     font-family:"HELVEYI1";
     font-size: 100px;
@@ -74,6 +142,18 @@ export default {
     font-style: italic;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale
+  }
+
+  .date{
+    font-family:"HELVEYI1";
+    font-size: 35px;
+  }
+
+
+  .img{
+    display : block ;
+    opacity: 0.2;
+
   }
 }
 
